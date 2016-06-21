@@ -1,0 +1,117 @@
+/* Table of contents
+––––––––––––––––––––––––––––––––––––––––––––––––––
+- Custom styles
+- Hero
+*/
+
+/* Custom styles */
+img {
+    width: 100%;
+    height: 100%;
+}
+section {
+    padding: 8rem 0;
+    box-sizing: border-box;
+    background-color: #fff;
+    position: relative;
+}
+@media (min-width: 550px) {
+    section {
+        padding: 15rem 0;
+    }
+}
+.reverse {
+    color: #fff;
+}
+.center {
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+.full-height {
+    height: 100vh!important;
+    width: 100%;
+    padding: 0;
+}
+/* Navigation */
+header {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 10;
+    background-color: #000;
+}
+a {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+a.active {
+    color: #fff;
+    text-decoration: underline;
+}
+
+/* Hero */
+.loader {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background-color: #000;
+}
+.path-active {
+
+  transition: stroke-dashoffset 2s ease-in-out !important;
+}
+
+
+#hero {
+    /*background-image: url('../images/hero.jpg');*/
+    background-image: url('https://placeholdit.imgix.net/~text?txtsize=66&txt=1440%C3%97782&w=1440&h=782');
+    background-position: center center;
+    background-size: cover;
+}
+@media
+(min-device-pixel-ratio: 2),
+(min-resolution: 192dpi) {
+    #hero {
+        /*background-image: url('../images/hero@2x.jpg');*/
+        background-image: url('https://placeholdit.imgix.net/~text?txtsize=66&txt=1440%C3%97782&w=1440&h=782');
+    }
+}
+
+/* Intro */
+#intro {
+    background-color: #000;
+}
+
+/* About */
+@media (min-width: 750px) {
+    #about .one-third.column {
+        width: 33.33333%;
+        margin: 0;
+    }
+}
+
+/* Work */
+#work {
+    background-color: #000;
+}
+
+/* Larger than mobile */
+@media (min-width: 400px) {}
+
+/* Larger than phablet (also point when grid becomes active) */
+@media (min-width: 550px) {}
+
+/* Larger than tablet */
+@media (min-width: 750px) {}
+
+/* Larger than desktop */
+@media (min-width: 1000px) {}
+
+/* Larger than Desktop HD */
+@media (min-width: 1200px) {}
