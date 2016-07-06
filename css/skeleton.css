@@ -28,8 +28,6 @@
 .column,
 .columns {
   width: 100%;
-  display:flex;
-  flex-wrap: wrap;
   box-sizing: border-box; }
 
 /* For devices larger than 400px */
@@ -41,7 +39,7 @@
 @media (min-width: 550px) {
   .column,
 .columns {
-  width: 50%;
+  width: 48%;
   float: left;
   box-sizing: border-box; }
 }
@@ -169,20 +167,17 @@ input[type="submit"],
 input[type="reset"],
 input[type="button"] {
   display: inline-block;
-  height: 38px;
-  padding: 0 30px;
-  color: #555;
+  padding: 20px 40px;
+  color: #005387;
   text-align: center;
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 600;
-  line-height: 38px;
   letter-spacing: .1rem;
   text-transform: uppercase;
   text-decoration: none;
   white-space: nowrap;
   background-color: transparent;
-  border-radius: 4px;
-  border: 1px solid #bbb;
+  border: 2px solid #005387;
   cursor: pointer;
   box-sizing: border-box; }
 .button:hover,
@@ -195,17 +190,16 @@ button:focus,
 input[type="submit"]:focus,
 input[type="reset"]:focus,
 input[type="button"]:focus {
-  color: #333;
-  border-color: #888;
-  outline: 0; }
+  color: #005387;
+  border-color: #005387;
+}
 .button.button-primary,
 button.button-primary,
 input[type="submit"].button-primary,
 input[type="reset"].button-primary,
 input[type="button"].button-primary {
-  color: #FFF;
-  background-color: #33C3F0;
-  border-color: #33C3F0; }
+  color: #005387;
+  border-color: #005387; }
 .button.button-primary:hover,
 button.button-primary:hover,
 input[type="submit"].button-primary:hover,
@@ -216,9 +210,8 @@ button.button-primary:focus,
 input[type="submit"].button-primary:focus,
 input[type="reset"].button-primary:focus,
 input[type="button"].button-primary:focus {
-  color: #FFF;
-  background-color: #1EAEDB;
-  border-color: #1EAEDB; }
+  color: #005387;
+  border-color: #005387; }
 
 
 /* Forms
@@ -358,6 +351,7 @@ form {
 /* Utilities
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .u-full-width {
+  height: 100%;
   width: 100%;
   box-sizing: border-box; }
 .u-max-full-width {
