@@ -78,13 +78,13 @@ nav {
 }
 .sub-nav {
     display: block;
-    width: 100%;    
+    width: 100%;
     position: fixed;
     z-index: 10;
     padding-top: 7px;
     text-align: center;
     background-color: transparent;
-    top: 0;    
+    top: 0;
     color: #fff;
 }
 .sub-nav .sub-nav-home {
@@ -130,7 +130,7 @@ nav {
     font-weight: 600;
     margin-bottom: 9px;
 }
-#hero h2 {   
+#hero h2 {
     margin-top: 10px;
     font-size: 24px;
 }
@@ -143,39 +143,38 @@ nav {
     background-image: url('../images/projects/new-build-landscaping-hero.jpg');
     background-position: center center;
     background-size: cover;
-    max-height: 80vh;    
+    max-height: 80vh;
 }
 .front-property-landscaping #hero {
     background-image: url('../images/projects/front-property-landscaping-hero.jpg');
     background-position: center center;
     background-size: cover;
-    max-height: 80vh; 
+    max-height: 80vh;
 }
 .asphalt-driveway #hero {
     background-image: url('../images/projects/asphalt-driveway.jpg');
     background-position: center center;
     background-size: cover;
-    max-height: 80vh; 
+    max-height: 80vh;
 }
 .paved-courtyard #hero {
     background-image: url('../images/projects/paved-courtyard-hero.jpg');
     background-position: center center;
     background-size: cover;
-    max-height: 80vh;  
+    max-height: 80vh;
 }
 .ready-lawn #hero {
     background-image: url('../images/projects/ready-lawn-hero.jpg');
     background-position: center center;
     background-size: cover;
-    max-height: 80vh;  
+    max-height: 80vh;
 }
 .garden-path #hero {
     background-image: url('../images/projects/garden-path-hero.jpg');
     background-position: center center;
     background-size: cover;
-    max-height: 80vh;  
+    max-height: 80vh;
 }
-
 
 
 /* Intro */
@@ -194,6 +193,152 @@ nav {
     text-align: center;
 }
 
+#projects .one-third a {
+    float: left;
+    color: #fff;
+}
+
+#projects .one-third figure {
+    position: relative;
+    overflow: hidden;
+    margin: 3px;
+    background: #333;
+}
+
+#projects .one-third figure img {
+    position: relative;
+    display: block;
+    width: 100%;
+    opacity: 0.7;
+    -webkit-transition: opacity 0.3s;
+    transition: opacity 0.3s;
+}
+
+#projects .one-third figcaption {
+    position: absolute;
+    top: 0;
+    z-index: 11;
+    padding: 10px;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+#projects .one-third figcaption h2 {
+    margin: 0 0 20px 0;
+    color: #3498db;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 300;
+    font-size: 130%;
+    -webkit-transition: -webkit-transform 0.3s;
+    transition: transform 0.3s;
+}
+
+#projects .one-third figcaption p {
+    padding: 0 20px;
+    color: #aaa;
+    font-weight: 300;
+    -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+#projects .one-third figcaption h2,
+#projects .one-third figcaption p {
+    -webkit-transform: translateY(50px);
+    transform: translateY(50px);
+}
+
+#projects .one-third figure button {
+    position: absolute;
+    padding: 4px 20px;
+    border: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+    -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+#projects .one-third figcaption,
+#projects .one-third figcaption h2,
+#projects .one-third figcaption p,
+#projects .one-third figure button {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+/* Style for SVG */
+#projects .one-third svg {
+    position: absolute;
+    top: -1px; /* fixes rendering issue in FF */
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    left: 0;
+}
+
+#projects .one-third svg path {
+    fill: #005387;
+    opacity: .8;
+}
+
+/* Hover effects */
+#projects .one-third a:hover figure img {
+    opacity: 1;
+}
+
+#projects .one-third a:hover figcaption h2,
+#projects .one-third a:hover figcaption p {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+}
+
+#projects .one-third a:hover figcaption p {
+    opacity: 0;
+}
+
+/* Individual styles */
+#projects .one-third figure button {
+    top: 50%;
+    left: 50%;
+    border: 2px solid #fff;
+    background: transparent;
+    color: #fff;
+    opacity: 0;
+    -webkit-transform: translateY(-50%) translateX(-50%) scale(0.25);
+    transform: translateY(-50%) translateX(-50%) scale(0.25);
+}
+#projects .one-third a:hover figure button {
+    opacity: 1;
+    -webkit-transform: translateY(-50%) translateX(-50%) scale(1);
+    transform: translateY(-50%) translateX(-50%) scale(1);
+}
+
+
+#projects .one-third figcaption h2,
+#projects .one-third figcaption p {
+    -webkit-transition-timing-function: cubic-bezier(0.250, 0.250, 0.115, 1); /* older webkit */
+    -webkit-transition-timing-function: cubic-bezier(0.250, 0.250, 0.115, 1.445);
+    timing-function: cubic-bezier(0.250, 0.250, 0.115, 1.445);
+}
+
+#projects .one-third a:hover figcaption p {
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s;
+    -webkit-transition-duration: 0.1s;
+    transition-duration: 0.1s;
+}
+
+
+#projects .one-third figcaption h2 {
+    color: #fff;
+}
+
+#projects .one-third a:hover figcaption h2 {
+    -webkit-transform: translateY(5px);
+    transform: translateY(5px);
+}
+
 /* Footer */
 .footer-wrap {
     width: 100%;
@@ -202,11 +347,11 @@ nav {
     box-sizing: border-box;
 }
 .footer-wrap p {
-    color: #fff;   
+    color: #fff;
     margin-bottom: 0;
 }
 .footer-wrap li {
-    color: #fff;   
+    color: #fff;
     list-style-type: none;
     font-size: 20px;
 }
@@ -214,7 +359,7 @@ nav {
 
 /* Larger than mobile */
 @media (min-width: 400px) {
-    
+
 }
 
 /* Larger than phablet (also point when grid becomes active) */
@@ -235,7 +380,7 @@ nav {
     .icon-row p {
         display: inline-block;
     }
-    
+
 }
 
 /* Larger than tablet */
@@ -258,7 +403,7 @@ nav {
     }
     nav {
         display: block;
-        width: 100%;    
+        width: 100%;
         position: fixed;
         z-index: 10;
         padding-top: 30px;
@@ -287,18 +432,18 @@ nav {
         color: #fff;
     }
     .nav-reverse {
-        animation: change-bg .5s;  
-        opacity: .8;   
+        animation: change-bg .5s;
+        opacity: .8;
         background-color: #005387;
         padding-top: 10px;
         height: 43px;
     }
     .nav-reverse li {
-        animation: change-navs .5s;  
+        animation: change-navs .5s;
         width: 130px;
     }
     nav.nav-reverse a:hover,
-    nav.nav-reverse a.active {   
+    nav.nav-reverse a.active {
         padding-bottom: 15px;
     }
 
