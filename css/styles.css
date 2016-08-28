@@ -143,7 +143,7 @@ nav {
     font-size: 24px;
 }
 .home #hero {
-    background-image: url('../images/projects/new-build-landscaping-hero.jpg');
+    background-image: url('../images/hero-home.jpg');
     background-position: center center;
     background-size: cover;
 }
@@ -233,7 +233,7 @@ nav {
 }
 
 #projects .one-third figcaption h2 {
-    margin: 0 0 20px 0;
+    margin: -40px 0 20px 0;
     color: #3498db;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -281,7 +281,7 @@ nav {
     top: -1px; /* fixes rendering issue in FF */
     z-index: 10;
     width: 100%;
-    height: 100%;
+    height: 50%;
     left: 0;
 }
 
@@ -402,9 +402,6 @@ nav {
     #contact .row {
         display: flex;
         align-items: center;
-    }
-    #contact .icon-row {
-        padding-left: 50px;
     }
     .icon-nav {
       display: none;
