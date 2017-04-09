@@ -395,7 +395,12 @@ nav {
 }
 
 
-
+#services .container {
+    border-top: 3px solid #005387;
+    padding-top: 40px;
+    border-bottom: 3px solid #005387;
+    padding-bottom: 60px;
+}
 
 
 /* Footer */
