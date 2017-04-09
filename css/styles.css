@@ -28,13 +28,13 @@ p {
     font-size: 20px;
 }
 section {
-    padding: 4rem 0 6rem 0;
+    padding: 3rem 0 4rem 0;
     box-sizing: border-box;
     background-color: #fff;
     position: relative;
 }
 section:last-child {
-    padding: 4rem 0 4rem 0;
+    padding: 2rem 0 2rem 0;
 }
 .reverse {
     color: #fff;
@@ -218,15 +218,26 @@ nav {
     width: 100%;
 }
 
-/* Intro */
-
+/* reviews */
+#reviews {
+    padding: 0;
+}
+#reviews .owl-carousel .review-item { background: url('http://i47.tinypic.com/a9l0g3.png') top left no-repeat; padding-left: 55px; line-height: 18px; color: #005387; }
+#reviews .owl-carousel .review-item p { padding-right: 35px; line-height: 18px; background: url('http://i48.tinypic.com/eb1yrr.png') bottom right no-repeat; padding-bottom: 15px; color: #333; font-size: 13px; }
+.owl-nav {
+    display: none;
+}
+.owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
+    background: #005387 !important;
+}
 
 /* Portfolio */
 @media (min-width: 750px) {
-    #projects .one-third.column {
-        width: 33.33333%;
+    #projects .card.column {
+   
         margin: 0;
     }
+  
 }
 
 /* Contact */
@@ -234,19 +245,19 @@ nav {
     text-align: center;
 }
 
-#projects .one-third a {
+#projects .card a {
     float: left;
     color: #fff;
 }
 
-#projects .one-third figure {
+#projects .card figure {
     position: relative;
     overflow: hidden;
     margin: 3px;
     background: #333;
 }
 
-#projects .one-third figure img {
+#projects .card figure img {
     position: relative;
     display: block;
     width: 100%;
@@ -255,7 +266,7 @@ nav {
     transition: opacity 0.3s;
 }
 
-#projects .one-third figcaption {
+#projects .card figcaption {
     position: absolute;
     top: 0;
     z-index: 11;
@@ -265,7 +276,7 @@ nav {
     text-align: center;
 }
 
-#projects .one-third figcaption h2 {
+#projects .card figcaption h2 {
     margin: -40px 0 20px 0;
     color: #3498db;
     text-transform: uppercase;
@@ -276,7 +287,7 @@ nav {
     transition: transform 0.3s;
 }
 
-#projects .one-third figcaption p {
+#projects .card figcaption p {
     padding: 0 20px;
     color: #aaa;
     font-weight: 300;
@@ -284,13 +295,13 @@ nav {
     transition: opacity 0.3s, transform 0.3s;
 }
 
-#projects .one-third figcaption h2,
-#projects .one-third figcaption p {
+#projects .card figcaption h2,
+#projects .card figcaption p {
     -webkit-transform: translateY(50px);
     transform: translateY(50px);
 }
 
-#projects .one-third figure button {
+#projects .card figure button {
     position: absolute;
     padding: 4px 20px;
     border: none;
@@ -301,15 +312,15 @@ nav {
     transition: opacity 0.3s, transform 0.3s;
 }
 
-#projects .one-third figcaption,
-#projects .one-third figcaption h2,
-#projects .one-third figcaption p,
-#projects .one-third figure button {
+#projects .card figcaption,
+#projects .card figcaption h2,
+#projects .card figcaption p,
+#projects .card figure button {
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
 }
 /* Style for SVG */
-#projects .one-third svg {
+#projects .card svg {
     position: absolute;
     top: -1px; /* fixes rendering issue in FF */
     z-index: 10;
@@ -318,28 +329,28 @@ nav {
     left: 0;
 }
 
-#projects .one-third svg path {
+#projects .card svg path {
     fill: #005387;
     opacity: .8;
 }
 
 /* Hover effects */
-#projects .one-third a:hover figure img {
+#projects .card a:hover figure img {
     opacity: 1;
 }
 
-#projects .one-third a:hover figcaption h2,
-#projects .one-third a:hover figcaption p {
+#projects .card a:hover figcaption h2,
+#projects .card a:hover figcaption p {
     -webkit-transform: translateY(0);
     transform: translateY(0);
 }
 
-#projects .one-third a:hover figcaption p {
+#projects .card a:hover figcaption p {
     opacity: 0;
 }
 
 /* Individual styles */
-#projects .one-third figure button {
+#projects .card figure button {
     top: 50%;
     left: 50%;
     border: 2px solid #fff;
@@ -349,21 +360,21 @@ nav {
     -webkit-transform: translateY(-50%) translateX(-50%) scale(0.25);
     transform: translateY(-50%) translateX(-50%) scale(0.25);
 }
-#projects .one-third a:hover figure button {
+#projects .card a:hover figure button {
     opacity: 1;
     -webkit-transform: translateY(-50%) translateX(-50%) scale(1);
     transform: translateY(-50%) translateX(-50%) scale(1);
 }
 
 
-#projects .one-third figcaption h2,
-#projects .one-third figcaption p {
+#projects .card figcaption h2,
+#projects .card figcaption p {
     -webkit-transition-timing-function: cubic-bezier(0.250, 0.250, 0.115, 1); /* older webkit */
     -webkit-transition-timing-function: cubic-bezier(0.250, 0.250, 0.115, 1.445);
     timing-function: cubic-bezier(0.250, 0.250, 0.115, 1.445);
 }
 
-#projects .one-third a:hover figcaption p {
+#projects .card a:hover figcaption p {
     -webkit-transition-delay: 0s;
     transition-delay: 0s;
     -webkit-transition-duration: 0.1s;
@@ -371,14 +382,21 @@ nav {
 }
 
 
-#projects .one-third figcaption h2 {
+#projects .card figcaption h2 {
     color: #fff;
 }
 
-#projects .one-third a:hover figcaption h2 {
+#projects .card a:hover figcaption h2 {
     -webkit-transform: translateY(5px);
     transform: translateY(5px);
 }
+#projects .owl-item {
+    margin-right: 0 !important;
+}
+
+
+
+
 
 /* Footer */
 .footer-wrap {

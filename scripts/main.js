@@ -96,4 +96,30 @@ $(document).ready(function () {
         console.log('adcadc');
     });
 
+    $(document).ready(function(){
+         $(".owl-carousel").owlCarousel({
+            nav:true,
+            loop:true,
+            margin:30,
+            autoplay:true,
+            autoplayTimeout:3000,
+            responsiveClass:true,
+            responsive:{
+                0:{
+                    items:1,
+                    nav:true
+                },
+                561:{
+                    items:2,
+                    nav:false
+                },
+                769:{
+                    items:3,
+                    nav:true,
+                    loop:false
+                }
+            }
+         });
+    });
+
 });
