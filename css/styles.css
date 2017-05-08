@@ -69,7 +69,9 @@ section:last-child {
     float: none !important;
     text-align: center;
 }
-
+#hero input::placeholder {
+    color: #fff;
+}
 .underline {
     width: 200px;
     height: 2px;
@@ -100,6 +102,18 @@ nav li {
     list-style-type: none;
     text-transform: uppercase;
 }
+.icon-row {
+    color: #fff;
+}
+nav .icon-contact {
+    margin-right: 10px;
+    height: 30px;
+    width: 30px;
+}
+.icon-row p {
+    font-size: 16px;
+    margin-bottom: 7px;
+} 
 .icon-nav {
     position: fixed;
     top: 20px;
@@ -465,7 +479,10 @@ nav li {
 .text {
     padding: 30px;
 }
-
+#contact {
+    background: #005387;
+    padding: 0;
+}
 
 /* Footer */
 .footer-wrap {
@@ -608,11 +625,17 @@ nav li {
         margin-left: 0;
         width: 50%;
     }
-    #services .text {
+    #contact .column {
+        margin-left: 0;
+        width: 50%;
+    }
+    .text-left {
         text-align: right;
+        padding-left: 20vw
     }
     .text-right {
         padding-left: 30px;
+        padding-right: 20vw
     }
 }
 
