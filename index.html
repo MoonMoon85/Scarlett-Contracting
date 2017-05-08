@@ -35,24 +35,29 @@
 <body class="home">
 <!-- Primary Page Layout -->
 <nav id="nav" role='navigation'>
-    <ul>
-        <li><a href="#intro" id="intro-anchor">Intro</a></li>
-        <li><a href="#projects" id="anchor1">Projects</a></li>
-        <li><a href="#contact" id="anchor2">Contact</a></li>
+    <ul class="container">
+        <li><img width="150px" src="images/logo.png"></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#services"">Services</a></li>
+        <li><a href="#intro">About us</a></li>
     </ul>
 </nav>
-<section id="hero" class="center reverse full-height">
+<section id="hero" class="center reverse">
+    <img    sizes="(max-width: 768px) 100vw, 1440px"
+            srcset="images/hero-home-sm.jpg 1120w,
+                    images/hero-home-md.jpg 1440w,
+                    images/hero-home-lg.jpg 1600w,
+                    images/hero-home-xl.jpg 2880w"
+            src="images/hero-home-md.jpg"
+            alt="Scarlett Contracting" 
+            class="u-full-width">
+    <div class="hero-overlay"></div>
     <div class="container">
         <div class="row">
-            <div class="six columns center-div">
-                <img class="u-full-width" src="images/logo.png" alt="Logo">
+            <div class="twelve columns center-div">
+                <h1>We do Ashphalt, Concrete, Landscaping & Timber&nbsp;Works</h1>
             </div>
         </div>
-        
-    </div>
-</section>
-<section id="call-to-action" class="center reverse">
-    <div class="container">
         <div class="row call-to-action">
             <div class="twelve columns center-div">
                 <p>Drop us an email if you have a question, we'll get right back to you!</p>
@@ -71,58 +76,51 @@
             <div class="two-thirds columns center-div">
                 <h2>Delivering the quality you deserve</h2>
                 <p>Scarlett Contracting is a family owned and operated business based in Christchurch.  We specialise in residential site works.  With over 10 years’ experience in the industry we pride ourselves on our high standards and attention to detail.  You can trust us to deliver the quality you deserve first time, every time.</p>
-<!--                 <a class="button button-primary" href="#contact">Contact us</a> -->
             </div>
         </div>
     </div>
 </section>
-
-<section id="projects" class="center">
-    <div class="container">
-        <div class="row">
-            <div class="owl-carousel  owl-theme center">
-            <div class="card">
-                <a href="projects/new-build-landscaping/index.html" data-path-hover="M 0,0 0,38 90,58 180.5,38 180,0 z">
-                    <figure>
-                        <img class="u-full-width" src="images/tiles/project-4.jpg">
-                        <svg viewBox="0 0 180 320" preserveAspectRatio="none"><path d="M 0 0 L 0 182 L 90 126.5 L 180 182 L 180 0 L 0 0 z "/></svg>
-                        <figcaption>
-                            <h2>New Build Landscaping</h2>
-                            <button>View</button>
-                        </figcaption>
-                    </figure>
-                </a>
+<section id="services">
+    <div class="reverse">
+        <div class="row center">
+            <div class="one-half column text">
+                <h2>Ashphalt & Concrete</h2>
+                <p>A few lines about the services you fdo regarding to ashpalt</p>
+                <a href="services/ashphalt-concrete/index.html">See our work ></a>
             </div>
-            <div class="card">
-                <a href="projects/front-property-landscaping/index.html" data-path-hover="M 0,0 0,38 90,58 180.5,38 180,0 z">
-                    <figure>
-                        <img class="u-full-width" src="images/tiles/project-5.jpg">
-                        <svg viewBox="0 0 180 320" preserveAspectRatio="none"><path d="M 0 0 L 0 182 L 90 126.5 L 180 182 L 180 0 L 0 0 z "/></svg>
-                        <figcaption>
-                            <h2>Front Property</h2>
-                            <button>View</button>
-                        </figcaption>
-                    </figure>
-                </a>
+            <div class="one-half column">
+                <img class="u-full-width" src="images/ashphalt-concrete.jpg">
             </div>
-            <div class="card">
-                <a href="projects/asphalt-driveway/index.html" data-path-hover="M 0,0 0,38 90,58 180.5,38 180,0 z">
-                    <figure>
-                        <img class="u-full-width" src="images/tiles/project-6.jpg">
-                        <svg viewBox="0 0 180 320" preserveAspectRatio="none"><path d="M 0 0 L 0 182 L 90 126.5 L 180 182 L 180 0 L 0 0 z "/></svg>
-                        <figcaption>
-                            <h2>Asphalt Driveway</h2>
-                            <button>View</button>
-                        </figcaption>
-                    </figure>
-                </a>
+        </div>
+        <div class="row center">
+            <div class="one-half column">
+                <img class="u-full-width" src="images/landscaping.jpg">
             </div>
+            <div class="one-half column text-right">
+                <h2>Landscaping</h2>
+                <p>A few lines about the services you fdo regarding to ashpalt</p>
+                <a href="services/ashphalt-concrete/index.html">See our work ></a>
+            </div>
+        </div>
+        <div class="row center">
+            <div class="one-half column text">
+                <h2>Timber Work</h2>
+                <p>A few lines about the services you fdo regarding to ashpalt</p>
+                <a href="services/ashphalt-concrete/index.html">See our work ></a>
+            </div>
+            <div class="one-half column">
+                <img class="u-full-width" src="images/timber-work.jpg">
             </div>
         </div>
     </div>
 </section>
 <section id="reviews">
     <div class="container">
+    <div class="row">
+        <div class="two-thirds columns center-div">
+            <h2>Some words from our clients</h2>
+        </div>
+    </div>
         <div class="row">
             <div class="owl-carousel  owl-theme">
                 <div class="review-item"><p>Lee Scarlett proved to be just the person I was looking for. He took a keen personal interest in the project, completed the work very effectively and followed up to ensure I was happy with the result.</p></div>
@@ -139,27 +137,6 @@
             </div>
         </div>
     </div>   
-</section>
-<section id="services">
-    <div class="container">
-        <div class="row">
-            <div class="one-third column">
-                <h4>Ashphalt & Concrete</h4>
-                <p>A few lines about the services you fdo regarding to ashpalt</p>
-                <a href="#">View projects</a>
-            </div>
-           <div class="one-third column">
-                <h4>Landscaping</h4>
-                <p>A few lines about the services you fdo regarding to ashpalt</p>
-                <a href="#">View projects</a>
-            </div>
-            <div class="one-third column">
-                <h4>Timber Work</h4>
-                <p>A few lines about the services you fdo regarding to ashpalt</p>
-                <a href="#">View projects</a>
-            </div>            
-        </div>
-    </div>
 </section>
 <section id="contact">
     <div class="container">

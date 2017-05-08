@@ -28,7 +28,7 @@ p {
     font-size: 20px;
 }
 section {
-    padding: 3rem 0 4rem 0;
+    padding: 5rem 0 4rem 0;
     box-sizing: border-box;
     background-color: #fff;
     position: relative;
@@ -50,7 +50,19 @@ section:last-child {
     -ms-flex-align: center;
     -webkit-align-items: center;
     align-items: center;
-    text-align: center;
+}
+#hero.center {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-flex-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    flex-direction: column;
 }
 .center-div {
     margin: 0 auto !important;
@@ -65,8 +77,28 @@ section:last-child {
     margin: 0 auto;
 }
 /* Navigation */
-nav {
+nav li:not(:first-child) {
     display: none;
+}
+nav {
+    display: block;
+    width: 100%;
+    position: absolute;
+    z-index: 10;
+    padding-top: 20px;
+    text-align: center;
+    background-color: transparent;
+    border-bottom: 1px solid #fff;
+    top: 0;
+}
+nav ul {
+    margin-bottom: 0;
+}
+nav li {
+    padding: 0 20px;
+    display: inline-block;
+    list-style-type: none;
+    text-transform: uppercase;
 }
 .icon-nav {
     position: fixed;
@@ -133,23 +165,36 @@ nav {
 #hero h1 {
     font-weight: 600;
     margin-bottom: 9px;
+    font-size: 5VW;
 }
 #hero h2 {
     margin-top: 10px;
     font-size: 24px;
 }
 #hero {
-    min-height: 350px;
+    padding: 0;
 }
-.home #hero {
-    background-image: url('../images/hero-home.jpg');
-    background-position: center center;
-    background-size: cover;
+.home #hero .container{
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    top: 40%;
+    background: #005387;
+    width: 100%;
+    padding-top: 10px;
 }
-.home #hero .u-full-width {
-    max-width: 300px;
-    margin-top: 70px;
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    opacity: .4;
+    background-color: #005387;
 }
+
 .new-build-landscaping #hero {
     background-image: url('../images/projects/new-build-landscaping-hero.jpg');
     background-position: center center;
@@ -186,21 +231,24 @@ nav {
     background-size: cover;
     max-height: 80vh;
 }
-#call-to-action {
+.call-to-action {
     background-color: #005387;
     padding: 15px 0 10px;
     box-sizing: border-box;
+    display: none;
 }
-#call-to-action input {
-    color: #333;
+.call-to-action input {
+    color: #fff;
     font-family: "Lato", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    border-radius: 0;
+    border-radius: 2px;
     font-size: 20px;
     margin: 0 5px;
     font-weight: 300;
     margin-bottom: 10px;
+    background: transparent;
+    border: 1px solid #fff;
 }
-#call-to-action button {
+.call-to-action button {
     color: #fff;    
     border-color: #fff;
     font-weight: 300;
@@ -211,16 +259,16 @@ nav {
     padding: 4px 40px;
     margin-bottom: 10px;
 }
-#call-to-action form {
+.call-to-action form {
     margin-bottom: 0;
 }
-#call-to-action .columns {
+.call-to-action .columns {
     width: 100%;
 }
 
 /* reviews */
-#reviews {
-    padding: 0;
+.owl-carousel {
+    margin-top: 30px;
 }
 #reviews .owl-carousel .review-item { background: url('http://i47.tinypic.com/a9l0g3.png') top left no-repeat; padding-left: 55px; line-height: 18px; color: #005387; }
 #reviews .owl-carousel .review-item p { padding-right: 35px; line-height: 18px; background: url('http://i48.tinypic.com/eb1yrr.png') bottom right no-repeat; padding-bottom: 15px; color: #333; font-size: 13px; }
@@ -396,10 +444,26 @@ nav {
 
 
 #services .container {
-    border-top: 3px solid #005387;
-    padding-top: 40px;
-    border-bottom: 3px solid #005387;
-    padding-bottom: 60px;
+    padding-bottom: 30px;
+}
+#services .center {
+    flex-direction: column;
+}
+#services {
+    background: #005387;
+    padding: 0;
+}
+#services a {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 300;
+    text-decoration: none;
+}
+#services a:hover {
+    text-decoration: underline;
+}
+.text {
+    padding: 30px;
 }
 
 
@@ -444,7 +508,13 @@ nav {
     .icon-row p {
         display: inline-block;
     }
-
+    .call-to-action {
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+    }
 }
 
 /* Larger than tablet */
@@ -465,31 +535,42 @@ nav {
     nav {
         display: block;
         width: 100%;
-        position: fixed;
+        position: absolute;
         z-index: 10;
-        padding-top: 30px;
+        padding-top: 20px;
         text-align: center;
         background-color: transparent;
-        border-bottom: 2px solid #fff;
+        border-bottom: 1px solid #fff;
         top: 0;
     }
+    nav ul {
+        margin-bottom: 0;
+    }
     nav li {
-        padding: 0 10px;
-        width: 200px;
+        padding: 0 20px;
         display: inline-block;
         list-style-type: none;
         text-transform: uppercase;
     }
+    nav li:first-child {
+        float: left;
+    }
+    nav li:not(:first-child) {
+        float: right;
+        padding-top: 11px;
+        display: block;
+    }
     nav a {
-        font-size: 20px;
-        font-weight: 300;
+        font-size: 16px;
+        font-weight: 400;
         text-decoration: none;
         color: #fff;
+        position: relative;
     }
     nav a:hover,
     nav a.active {
         border-bottom: 3px solid #fff;
-        padding-bottom: 34px;
+        padding-bottom: 18px;
         color: #fff;
     }
     .nav-reverse {
@@ -497,7 +578,7 @@ nav {
         opacity: .8;
         background-color: #005387;
         padding-top: 10px;
-        height: 43px;
+        height: 77px;
     }
     .nav-reverse li {
         animation: change-navs .5s;
@@ -507,24 +588,31 @@ nav {
     nav.nav-reverse a.active {
         padding-bottom: 15px;
     }
-
-    @keyframes change-bg {
-      0% {
-        background-color: transparent;
-        height: auto;
-      }
-      100% {
-        background-color: #005387;
-        height: 43px;
-      }
+    #hero h1 {
+        font-size: 4VW;
     }
-    @keyframes change-navs {
-      0% {
-        width: 200px;
-      }
-      100% {
-        width: 130px;
-      }
+    .call-to-action {
+        background-color: transparent;
+        padding: 15px 0 10px;
+        box-sizing: border-box;
+    }
+    .home #hero .container {
+        position: absolute;
+        background: transparent;
+        width: 80%;
+    }
+    #services .center {
+        flex-direction: row;
+    }
+    #services .column {
+        margin-left: 0;
+        width: 50%;
+    }
+    #services .text {
+        text-align: right;
+    }
+    .text-right {
+        padding-left: 30px;
     }
 }
 
@@ -533,3 +621,300 @@ nav {
 
 /* Larger than Desktop HD */
 @media (min-width: 1200px) {}
+
+
+
+/* General style */
+#gallery {
+    padding-top: 0;
+}
+#gallery .cell {
+    background-size: cover;
+}
+.grid-gallery ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.grid-gallery figure {
+    margin: 0;
+}
+
+.grid-gallery figure img {
+    display: block;
+    width: 100%;
+}
+
+.grid-gallery figcaption h3 {
+    margin: 0;
+    padding: 0 0 0.5em;
+}
+
+.grid-gallery figcaption p {
+    margin: 0;
+}
+
+/* Grid style */
+.grid-wrap {
+    max-width: 69em;
+    margin: 0 auto;
+    padding: 0 1em 1.875em;
+}
+
+.grid {
+    margin: 0 auto;
+}
+
+.grid li {
+    width: 25%;
+    float: left;
+    cursor: pointer;
+}
+
+.grid figure {
+    padding: 15px;
+    -webkit-transition: opacity 0.2s;
+    transition: opacity 0.2s;
+}
+
+.grid li:hover figure {
+    opacity: 0.7;
+}
+
+.grid figcaption {
+    background: #e4e4e4;
+    padding: 25px;
+}
+
+/* Slideshow style */
+.slideshow {
+    position: fixed;
+    background: rgba(0,0,0,0.6);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 500;
+    opacity: 0;
+    visibility: hidden;
+    overflow: hidden;
+    -webkit-perspective: 1000px;
+    perspective: 1000px;
+    -webkit-transition: opacity 0.5s, visibility 0s 0.5s;
+    transition: opacity 0.5s, visibility 0s 0.5s;
+}
+
+.slideshow-open .slideshow {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transition: opacity 0.5s;
+    transition: opacity 0.5s;
+}
+
+.slideshow ul {
+    width: 100%;
+    height: 100%;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transform: translate3d(0,0,150px);
+    transform: translate3d(0,0,150px);
+    -webkit-transition: -webkit-transform 0.5s;
+    transition: transform 0.5s;
+}
+
+.slideshow ul.animatable li {
+    -webkit-transition: -webkit-transform 0.5s;
+    transition: transform 0.5s;
+}
+
+.slideshow-open .slideshow ul {
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+}
+
+.slideshow li {
+    width: 660px;
+    height: 560px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -280px 0 0 -330px;
+    visibility: hidden;
+}
+
+.slideshow li.show {
+    visibility: visible;
+}
+
+.slideshow li:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(255,255,255,0.8);
+    -webkit-transition: opacity 0.3s;
+    transition: opacity 0.3s;
+}
+
+.slideshow li.current:after {
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transition: opacity 0.3s, visibility 0s 0.3s;
+    transition: opacity 0.3s, visibility 0s 0.3s;
+}
+
+.slideshow figure {
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    border: 50px solid #fff;
+    overflow: hidden;
+}
+
+.slideshow figcaption {
+    padding-bottom: 20px;
+}
+
+.slideshow figcaption h3 {
+    font-weight: 300;
+    font-size: 200%;
+}
+
+/* Navigation */
+.slideshow nav span {
+    position: fixed;
+    z-index: 1000;
+    color: #59656c;
+    text-align: center;
+    padding: 3%;
+    cursor: pointer;
+    font-size: 2.2em;
+}
+
+.slideshow nav span.nav-prev,
+.slideshow nav span.nav-next {
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.slideshow nav span.nav-next {
+    right: 0;
+}
+
+.slideshow nav span.nav-close {
+    top: 0;
+    right: 0;
+    padding: 0.5em 1em;
+    color: #31373a;
+}
+
+.icon:before,
+.icon:after {
+    font-family: 'fontawesome';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+span.nav-prev:before {
+    content: "\e601";
+}
+
+span.nav-next:before  {
+    content: "\e600";
+}
+
+span.nav-close:before {
+    content: "\e602";
+}
+
+/* Info on arrow key navigation */
+.info-keys {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    width: 60px;
+    font-size: 8px;
+    padding-top: 20px;
+    text-transform: uppercase;
+    color: #fff;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.info-keys:before,
+.info-keys:after {
+    position: absolute;
+    top: 0;
+    width: 16px;
+    height: 16px;
+    border: 1px solid #fff;
+    text-align: center;
+    line-height: 14px;
+    font-size: 12px;
+}
+
+.info-keys:before {
+    left: 10px;
+    content: "\e603";
+}
+
+.info-keys:after {
+    right: 10px;
+    content: "\e604";
+}
+
+/* Example media queries (reduce number of columns and change slideshow layout) */
+
+@media screen and (max-width: 60em) {
+    /* responsive columns; see "Element sizing" on http://masonry.desandro.com/options.html */
+    .grid li {
+        width: 33.3%;
+    }
+
+    .slideshow li {
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        margin: 0;
+    }
+
+    .slideshow li figure img {
+        width: auto;
+        margin: 0 auto;
+        max-width: 100%;
+    }
+
+    .slideshow nav span,
+    .slideshow nav span.nav-close {
+        font-size: 1.8em;
+        padding: 0.3em;
+    }
+
+    .info-keys {
+        display: none;
+    }
+
+}
+
+@media screen and (max-width: 35em) {
+    .grid li {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 24em) {
+    .grid li {
+        width: 100%;
+    }
+}
