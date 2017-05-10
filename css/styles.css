@@ -110,11 +110,11 @@ nav .icon-contact {
     height: 30px;
     width: 30px;
 }
-.icon-row p {
+nav .icon-row p {
     font-size: 16px;
     margin-bottom: 7px;
 } 
-.icon-nav {
+nav .icon-nav {
     position: fixed;
     top: 20px;
     right: 20px;
@@ -194,10 +194,33 @@ nav .icon-contact {
     margin-right: auto;
     left: 0;
     right: 0;
-    top: 40%;
+    top: 32%;
     background: #005387;
     width: 100%;
     padding-top: 10px;
+}
+#hero .icon-contact {
+    margin-right: 20px;
+    height: 70px;
+    width: 70px;
+    top: -10px;
+}
+#hero .icon-row {
+    display: inline-block;
+}
+#hero .icon-row p {
+        font-size: 52px;
+    margin-bottom: 7px;
+    letter-spacing: 4px;
+    font-weight: 600;
+    line-height: 64px;
+} 
+#hero .icon-nav {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 10;
+    color: #fff;
 }
 .hero-overlay {
     position: absolute;
@@ -205,8 +228,8 @@ nav .icon-contact {
     left: 0;
     height: 100%;
     width: 100%;
-    opacity: .4;
-    background-color: #005387;
+    /*opacity: .4;
+    background-color: #005387;*/
 }
 
 .new-build-landscaping #hero {
@@ -261,6 +284,9 @@ nav .icon-contact {
     margin-bottom: 10px;
     background: transparent;
     border: 1px solid #fff;
+}
+.call-to-action input::placeholder {
+    color: #fff;
 }
 .call-to-action button {
     color: #fff;    
@@ -483,6 +509,13 @@ nav .icon-contact {
     background: #005387;
     padding: 0;
 }
+/*#contact {
+    font-size: 52px;
+    margin-bottom: 7px;
+    letter-spacing: 4px;
+    font-weight: 600;
+    line-height: 64px;
+}*/
 
 /* Footer */
 .footer-wrap {
@@ -635,7 +668,7 @@ nav .icon-contact {
     }
     .text-right {
         padding-left: 30px;
-        padding-right: 20vw
+        padding-right: 10vw;
     }
 }
 
