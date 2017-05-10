@@ -199,17 +199,14 @@ nav .icon-nav {
     width: 100%;
     padding-top: 10px;
 }
-#hero .icon-contact {
-    margin-right: 20px;
-    height: 70px;
-    width: 70px;
-    top: -10px;
+.hero-logo {
+    display: none;
 }
 #hero .icon-row {
     display: inline-block;
 }
 #hero .icon-row p {
-        font-size: 52px;
+    font-size: 42px;
     margin-bottom: 7px;
     letter-spacing: 4px;
     font-weight: 600;
@@ -222,6 +219,17 @@ nav .icon-nav {
     z-index: 10;
     color: #fff;
 }
+#hero .icon {
+    display: none;
+}
+#hero .hero-img {
+
+    right: auto;
+    width: auto;
+     
+}
+
+    
 .hero-overlay {
     position: absolute;
     top: 0;
@@ -509,13 +517,11 @@ nav .icon-nav {
     background: #005387;
     padding: 0;
 }
-/*#contact {
-    font-size: 52px;
-    margin-bottom: 7px;
-    letter-spacing: 4px;
-    font-weight: 600;
-    line-height: 64px;
-}*/
+#logos .center {
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
 
 /* Footer */
 .footer-wrap {
@@ -548,10 +554,7 @@ nav .icon-nav {
     .two-thirds {
         width: 80%;
     }
-    .icon-contact {
-        margin-right: 30px;
-        vertical-align: middle;
-    }
+    
     .icon-row {
         text-align: left;
     }
@@ -565,6 +568,8 @@ nav .icon-nav {
         display: -webkit-flex;
         display: flex;
     }
+    
+    
 }
 
 /* Larger than tablet */
@@ -669,6 +674,23 @@ nav .icon-nav {
     .text-right {
         padding-left: 30px;
         padding-right: 10vw;
+    }
+    #hero .icon-row p {
+        font-size: 52px;
+    }
+    .hero-logo {
+        display: block;
+        margin-bottom: 20px;    
+    }
+    #hero .icon {
+        display: inline-block;
+    }
+    .icon-contact {
+        margin-right: 30px;
+        vertical-align: middle;
+        width: 60px;
+        height: 60px;
+        top: -10px;
     }
 }
 
