@@ -39,7 +39,7 @@
 @media (min-width: 550px) {
   .column,
 .columns {
-  width: 48%;
+  width: 100%;
   float: left;
   box-sizing: border-box; }
 }

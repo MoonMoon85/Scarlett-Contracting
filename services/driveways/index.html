@@ -3,7 +3,7 @@
 <head>
     <!-- Basic Page Needs -->
     <meta charset="utf-8">
-    <title>Scarlett Contracting - Asphalt & Concrete</title>
+    <title>Scarlett Contracting - Driveways</title>
     <meta name="description" content="">
     <meta name="author" content="">
     <!-- Mobile Specific Metas -->
@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="../../css/styles.css">
     
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="icon" type="image/png" href="../../images/favicon.png">
     <!-- Google Analytics -->
     <script>
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -126,7 +126,7 @@
     <div class="container">
         <div class="row">
             <div class="twelve columns center-div">
-                <h1>Ashphalt Driveways</h1>
+                <h1>Driveways</h1>
             </div>
         </div>
         <div class="row call-to-action">
@@ -137,7 +137,7 @@
                       <input type="email" name="email" placeholder="Email">
                       <button type="submit">Send</button>
                 </form>      -->           
-                <div class="icon-row"><div data-icon="ei-bell" data-size="m" class="icon-contact"></div><p>0800SCL4YOU</p></div>
+                <div class="icon-row"><div data-icon="ei-bell" data-size="m" class="icon-contact"></div><p><a href="tel:08007254968">0800SCL4YOU</a></p></div>
             </div>
         </div>
     </div>
@@ -146,8 +146,17 @@
     <div class="container">
         <div class="row">
             <div class="two-thirds columns center-div">
-                <h2>Upgrade your driveway!</h2>
-                <p>Give me some stuff here about your ashphalt and concrete service. Give me some stuff here about your ashphalt and concrete service. Give me some stuff here about your ashphalt and concrete service. Give me some stuff here about your ashphalt and concrete service. Give me some stuff here about your ashphalt and concrete service. Give me some stuff here about your ashphalt and concrete service.</p>
+                <p>Your driveway is one of the first things someone views when they visit your property, so it is essential to ensure it has a quality finish and looks immaculate. Whether you have an existing damaged driveway in need of repair, a reconstruction or a new design and build the team at Scarlett Contracting Ltd are experts in start to finish driveway construction. One of our friendly staff will happily come to your property to discuss your needs and provide you with a free quote.</p>
+            </div>
+            <div class="twelve columns center-div">
+                <ul class="work-list center-div">
+                    <li>Plain, Coloured or Exposed aggregate concrete</li>
+                    <li>Asphalt</li>
+                    <li>Decorative chip</li>
+                    <li>Drainage – sumps and strip drains</li>
+                    <li>Kerb and channel</li>
+                    <li>Vehicle crossings</li>
+                </ul>
             </div>
         </div>
     </div>
@@ -172,6 +181,18 @@
         </div>     
     </div>
 </section>
+<section id="logos">
+    <div class="container">
+        <div class="row center">
+            <div class="one-half column center">
+                <img src="../../images/site-safe.jpg">
+            </div>
+            <div class="one-half column center">
+                <img width="300" src="../../images/footer-logo.png">
+            </div>
+        </div>
+    </div>
+</section>
 <footer class="footer-wrap">
     <div class="container">
         <div class="row center-div">
@@ -186,7 +207,7 @@
  <script type="text/javascript">
 
         var temp = "<div class='cell' style='width:{width}px; height: {height}px; background-image: url(../../images/ashphalt-concrete/{index}.jpg)'></div>";
-        var w = 300, h = 300, html = '', limitItem = 11;
+        var w = 300, h = 300, html = '', limitItem = 16;
         for (var i = 0; i < limitItem; ++i) {
             html += temp.replace(/\{height\}/g, h).replace(/\{width\}/g, w).replace("{index}", i + 1);
         }
@@ -198,7 +219,7 @@
             animate: false,
             cellW: 300,
             cellH: 300,
-            delay: 50,
+            delay: 20,
             onResize: function() {
                 wall.fitWidth();
             }
