@@ -69,7 +69,9 @@ section:last-child {
     float: none !important;
     text-align: center;
 }
-
+#hero input::placeholder {
+    color: #fff;
+}
 .underline {
     width: 200px;
     height: 2px;
@@ -100,7 +102,19 @@ nav li {
     list-style-type: none;
     text-transform: uppercase;
 }
-.icon-nav {
+.icon-row {
+    color: #fff;
+}
+nav .icon-contact {
+    margin-right: 10px;
+    height: 30px;
+    width: 30px;
+}
+nav .icon-row p {
+    font-size: 16px;
+    margin-bottom: 7px;
+} 
+nav .icon-nav {
     position: fixed;
     top: 20px;
     right: 20px;
@@ -180,19 +194,50 @@ nav li {
     margin-right: auto;
     left: 0;
     right: 0;
-    top: 40%;
+    top: 32%;
     background: #005387;
     width: 100%;
     padding-top: 10px;
 }
+.hero-logo {
+    display: none;
+}
+#hero .icon-row {
+    display: inline-block;
+}
+#hero .icon-row p {
+    font-size: 42px;
+    margin-bottom: 7px;
+    letter-spacing: 4px;
+    font-weight: 600;
+    line-height: 64px;
+} 
+#hero .icon-nav {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 10;
+    color: #fff;
+}
+#hero .icon {
+    display: none;
+}
+#hero .hero-img {
+
+    right: auto;
+    width: auto;
+     
+}
+
+    
 .hero-overlay {
     position: absolute;
     top: 0;
     left: 0;
     height: 100%;
     width: 100%;
-    opacity: .4;
-    background-color: #005387;
+    /*opacity: .4;
+    background-color: #005387;*/
 }
 
 .new-build-landscaping #hero {
@@ -247,6 +292,9 @@ nav li {
     margin-bottom: 10px;
     background: transparent;
     border: 1px solid #fff;
+}
+.call-to-action input::placeholder {
+    color: #fff;
 }
 .call-to-action button {
     color: #fff;    
@@ -465,6 +513,14 @@ nav li {
 .text {
     padding: 30px;
 }
+#contact {
+    background: #005387;
+    padding: 0;
+}
+#logos .center {
+    flex-direction: column;
+    margin-bottom: 20px;
+}
 
 
 /* Footer */
@@ -498,10 +554,7 @@ nav li {
     .two-thirds {
         width: 80%;
     }
-    .icon-contact {
-        margin-right: 30px;
-        vertical-align: middle;
-    }
+    
     .icon-row {
         text-align: left;
     }
@@ -515,6 +568,8 @@ nav li {
         display: -webkit-flex;
         display: flex;
     }
+    
+    
 }
 
 /* Larger than tablet */
@@ -608,11 +663,34 @@ nav li {
         margin-left: 0;
         width: 50%;
     }
-    #services .text {
+    #contact .column {
+        margin-left: 0;
+        width: 50%;
+    }
+    .text-left {
         text-align: right;
+        padding-left: 20vw
     }
     .text-right {
         padding-left: 30px;
+        padding-right: 10vw;
+    }
+    #hero .icon-row p {
+        font-size: 52px;
+    }
+    .hero-logo {
+        display: block;
+        margin-bottom: 20px;    
+    }
+    #hero .icon {
+        display: inline-block;
+    }
+    .icon-contact {
+        margin-right: 30px;
+        vertical-align: middle;
+        width: 60px;
+        height: 60px;
+        top: -10px;
     }
 }
 

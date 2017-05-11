@@ -31,15 +31,41 @@
     </script>
     <!-- Saturn6 Call Tracking -->
     <script src="https://vxml4.plavxml.com/sited/ref/ctrk/657-32042" async=""></script>
+    <!-- Start of Async Drift Code -->
+        <script>
+        !function() {
+          var t;
+          if (t = window.driftt = window.drift = window.driftt || [], !t.init) return t.invoked ? void (window.console && console.error && console.error("Drift snippet included twice.")) : (t.invoked = !0, 
+          t.methods = [ "identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on" ], 
+          t.factory = function(e) {
+            return function() {
+              var n;
+              return n = Array.prototype.slice.call(arguments), n.unshift(e), t.push(n), t;
+            };
+          }, t.methods.forEach(function(e) {
+            t[e] = t.factory(e);
+          }), t.load = function(t) {
+            var e, n, o, i;
+            e = 3e5, i = Math.ceil(new Date() / e) * e, o = document.createElement("script"), 
+            o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + i + "/" + t + ".js", 
+            n = document.getElementsByTagName("script")[0], n.parentNode.insertBefore(o, n);
+          });
+        }();
+        drift.SNIPPET_VERSION = '0.3.1';
+        drift.load('n6hk32s76tsg');
+        </script>
+    <!-- End of Async Drift Code -->
 </head>
 <body class="home">
 <!-- Primary Page Layout -->
 <nav id="nav" role='navigation'>
     <ul class="container">
         <li><img width="150px" src="images/logo.png"></li>
+        <!-- <li><div class="icon-row"><div data-icon="ei-bell" data-size="m" class="icon-contact"></div><p>0800SCL4YOU</p></div></li> -->
         <li><a href="#contact">Contact</a></li>
         <li><a href="#services"">Services</a></li>
         <li><a href="#intro">About us</a></li>
+
     </ul>
 </nav>
 <section id="hero" class="center reverse">
@@ -50,22 +76,23 @@
                     images/hero-home-xl.jpg 2880w"
             src="images/hero-home-md.jpg"
             alt="Scarlett Contracting" 
-            class="u-full-width">
+            class="u-full-width hero-img">
     <div class="hero-overlay"></div>
     <div class="container">
         <div class="row">
-            <div class="twelve columns center-div">
-                <h1>We do Ashphalt, Concrete, Landscaping & Timber&nbsp;Works</h1>
+            <div class="six columns center-div">
+                <img class="u-full-width hero-logo" src="images/logo.png">
             </div>
         </div>
-        <div class="row call-to-action">
+        <div class="row">
             <div class="twelve columns center-div">
-                <p>Drop us an email if you have a question, we'll get right back to you!</p>
-                <form method="POST" action="https://formspree.io/williswebdesign1@gmail.com">
+                <h3>Get in touch today for your no obligation free quote.</h3>
+               <!--  <form method="POST" action="https://formspree.io/williswebdesign1@gmail.com">
                       <input type="text" name="name" placeholder="Name">
                       <input type="email" name="email" placeholder="Email">
                       <button type="submit">Send</button>
-                </form>
+                </form>      -->           
+                <div class="icon-row"><div data-icon="ei-bell" data-size="m" class="icon-contact"></div><p>0800SCL4YOU</p></div>
             </div>
         </div>
     </div>
@@ -74,7 +101,8 @@
     <div class="container">
         <div class="row">
             <div class="two-thirds columns center-div">
-                <h2>Delivering the quality you deserve</h2>
+                <h2>We can do ashphalt drieways, landscaping and timber works.</h2>
+                <h4>Delivering the quality you deserve</h4>
                 <p>Scarlett Contracting is a family owned and operated business based in Christchurch.  We specialise in residential site works.  With over 10 years’ experience in the industry we pride ourselves on our high standards and attention to detail.  You can trust us to deliver the quality you deserve first time, every time.</p>
             </div>
         </div>
@@ -83,8 +111,8 @@
 <section id="services">
     <div class="reverse">
         <div class="row center">
-            <div class="one-half column text">
-                <h2>Ashphalt & Concrete</h2>
+            <div class="one-half column text text-left">
+                <h2>Ashphalt Driveways</h2>
                 <p>A few lines about the services you fdo regarding to ashpalt</p>
                 <a href="services/ashphalt-concrete/index.html">See our work ></a>
             </div>
@@ -96,14 +124,14 @@
             <div class="one-half column">
                 <img class="u-full-width" src="images/landscaping.jpg">
             </div>
-            <div class="one-half column text-right">
-                <h2>Landscaping</h2>
+            <div class="one-half column text text-right">
+                <h2>Landscaping & Concreting</h2>
                 <p>A few lines about the services you fdo regarding to ashpalt</p>
                 <a href="services/ashphalt-concrete/index.html">See our work ></a>
             </div>
         </div>
         <div class="row center">
-            <div class="one-half column text">
+            <div class="one-half column text text-left">
                 <h2>Timber Work</h2>
                 <p>A few lines about the services you fdo regarding to ashpalt</p>
                 <a href="services/ashphalt-concrete/index.html">See our work ></a>
@@ -139,24 +167,26 @@
     </div>   
 </section>
 <section id="contact">
-    <div class="container">
-        <div class="row">
-            <div class="one-half column">
-                <h4>We would love to hear from&nbsp;you</h4>
-                <p>Contact us anytime for a free consultation. One of our friendly staff will assist you in any questions you may have.  Allow up to 24 hours for a responce during business days.</p>
-                <div class="icon-row"><div data-icon="ei-bell" data-size="m" class="icon-contact"></div><p>0800SCL4YOU</p></div>
-                <div class="icon-row"><div data-icon="ei-envelope" data-size="m" class="icon-contact    "></div><p>info@scarlettcontracting.co.nz</p></div>
-            </div>
-            <div class="one-half column">
-                <img class="u-full-width" src="images/contact-us.jpg">
-            </div>
+    <div class="row center reverse  call-to-action">
+        <div class="one-half column">
+            <img class="u-full-width" src="images/contact-us.jpg">
         </div>
+        <div class="one-half column text-right">
+            <h4>We would love to hear from&nbsp;you</h4>
+            <p>Contact us anytime for a free consultation. One of our friendly staff will assist you in any questions you may have.</p>
+            <form method="POST" action="https://formspree.io/williswebdesign1@gmail.com">
+                  <input maxlength="30" type="text" name="name" placeholder="Name">
+                  <input maxlength="30" type="text" name="phone" placeholder="Phone">
+                  <button type="submit">Send</button>
+            </form>   
+            <p style="margin-top: 30px; margin-bottom: 0">Or phone</p><h1>0800SCL4YOU</h1></div>
+        </div>     
     </div>
 </section>
 <section id="logos">
     <div class="container">
         <div class="row center">
-            <div class="one-half column">
+            <div class="one-half column center">
                 <img src="images/site-safe.jpg">
             </div>
             <div class="one-half column center">
