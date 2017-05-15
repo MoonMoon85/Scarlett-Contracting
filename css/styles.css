@@ -348,6 +348,10 @@ nav .icon-nav {
     background: #005387 !important;
 }
 
+#intro h4 {
+    color: #005387;
+}
+
 /* Portfolio */
 @media (min-width: 750px) {
     #projects .card.column {
